@@ -5,6 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
+    - name: checkout
+      uses: actions/checkout@v2 # This action accesses GITHUB_WORKSPACE which allows us to access our repository store and pass env variables e.t.c
     - name: Hello World Action Step
       id: hello
       uses: ./
